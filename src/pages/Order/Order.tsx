@@ -1,5 +1,11 @@
 import classNames from "classnames";
-import { Tabs, BuyerDetails, Delivery } from "components";
+import {
+  Tabs,
+  BuyerDetails,
+  Delivery,
+  PaymentMethods,
+  YourOrder,
+} from "components";
 import styles from "pages/Order/Order.module.scss";
 
 export default function Order() {
@@ -14,8 +20,10 @@ export default function Order() {
           <div className={styles.flex}>
             <BuyerDetails />
             <Delivery />
+            <PaymentMethods />
           </div>
         </div>
+        <YourOrder />
       </div>
     </div>
   );

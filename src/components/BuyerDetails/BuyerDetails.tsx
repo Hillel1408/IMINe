@@ -1,9 +1,9 @@
-import { Input } from "components";
+import { Input, Layout } from "components";
 import styles from "components/BuyerDetails/BuyerDetails.module.scss";
 
 export default function BuyerDetails() {
   return (
-    <div className={styles.root}>
+    <Layout>
       <h2 className="subTitle">Данные покупателя</h2>
       <div className={styles.grid}>
         <Input label="Имя" type="text" placeholder="Вадим" />
@@ -20,6 +20,6 @@ export default function BuyerDetails() {
         />
         <Input label="Telegram" type="text" placeholder="@p.vadim" />
       </div>
-    </div>
+    </Layout>
   );
 }

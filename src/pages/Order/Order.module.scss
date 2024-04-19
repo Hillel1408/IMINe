@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 309px;
   gap: 15px;
+  align-items: flex-start;
 }
 .flex {
   display: flex;

@@ -6,7 +6,7 @@ export default function Input({
   placeholder,
 }: {
   type: string;
-  label: string;
+  label?: string;
   placeholder?: string;
 }) {
   return (
