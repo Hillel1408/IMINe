@@ -10,7 +10,7 @@ export default function Tabs({
   className?: string;
   tabs: string[];
   activeTab: number;
-  setActiveTab: any;
+  setActiveTab: (arg: number) => void;
 }) {
   return (
     <ul className={classNames(styles.root, className)}>

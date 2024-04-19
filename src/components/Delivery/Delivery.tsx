@@ -51,7 +51,10 @@ export default function Delivery() {
       )}
       <Checkbox
         className={styles.checkbox}
-        onChange={() => setActive((prev) => !prev)}
+        onChange={() => {
+          setActive((prev) => !prev);
+          value.setOrder({ ...value.order, deliveryAddress: "", delivery: "" });
+        }}
       />
     </Layout>
   );

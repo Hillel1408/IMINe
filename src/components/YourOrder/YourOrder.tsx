@@ -7,7 +7,7 @@ export default function YourOrder() {
   const value = useContext(OrderContext);
 
   const onSubmit = () => {
-    console.log({ ...value.order, ...order });
+    console.log({ ...value.order, goods: order.goods });
   };
 
   const order = {
@@ -16,6 +16,12 @@ export default function YourOrder() {
       { id: 2, name: "Bitmain Antminer L7 9050MH/s" },
       { id: 3, name: "Bitmain Antminer S19 XP 141" },
       { id: 4, name: "Bitmain Antminer S19 XP 141 TH/s" },
+    ],
+    list: [
+      { title: "Товары", value: "36 890 ₽" },
+      { title: "Скидка (20%)", value: "29 512 ₽" },
+      { title: "Доставка", value: "2 000 ₽" },
+      { title: "Промокод", value: "-20%" },
     ],
   };
 
@@ -45,6 +51,23 @@ export default function YourOrder() {
           <li key={item.id}>{item.name}</li>
         ))}
       </ul>
+      <div className={styles.total}>
+        <ul>
+          {order.list.map((item, index) => (
+            <li key={index}>
+              <span>{item.title}</span>
+              <span></span>
+              <span>{item.value}</span>
+            </li>
+          ))}
+        </ul>
+        <div>
+          <span>Итого:</span>
+          <span></span>
+          <span>31 512 ₽</span>
+          <p>203 000</p>
+        </div>
+      </div>
       <Button text="Оформить заказ" onClick={onSubmit} />
     </Layout>
   );
