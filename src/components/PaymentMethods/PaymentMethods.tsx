@@ -7,7 +7,7 @@ export default function PaymentMethods() {
   const value = useContext(OrderContext);
 
   const onChange = (e: any) =>
-    value.setOrder({ ...value.order, delivery: e.target.value });
+    value.setOrder({ ...value.order, paymentMethods: e.target.value });
 
   return (
     <Layout>
