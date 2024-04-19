@@ -10,12 +10,22 @@
   line-height: 150%;
   letter-spacing: 0.64px;
   color: #0b0c0e;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   & > span {
     font-family: "Inter";
     font-size: 18px;
     font-weight: 500;
     line-height: 155%;
     color: #434956;
+  }
+  @media (max-width: 480px) {
+    font-size: 18px;
+    gap: 8px;
+    & > span {
+      font-size: 14px;
+    }
   }
 }
 .subTitle {
@@ -24,4 +34,7 @@
   font-weight: 700;
   line-height: 140%;
   color: #0b0c0e;
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 }

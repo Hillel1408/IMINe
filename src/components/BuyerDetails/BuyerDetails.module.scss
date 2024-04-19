@@ -9,4 +9,17 @@
   & > *:nth-child(n + 3) {
     grid-column: span 2;
   }
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    & > *:nth-child(1),
+    & > *:nth-child(2) {
+      grid-column: span 1;
+    }
+    & > *:nth-child(n + 3) {
+      grid-column: span 1;
+    }
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 }

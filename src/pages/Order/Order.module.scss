@@ -1,18 +1,31 @@
 .title {
   margin-bottom: 32px;
+  @media (max-width: 480px) {
+    margin-bottom: 16px;
+  }
 }
 .tabs {
   margin-bottom: 16px;
   width: fit-content;
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .grid {
   display: grid;
   grid-template-columns: 1fr 309px;
   gap: 15px;
   align-items: flex-start;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 .flex {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  @media (max-width: 480px) {
+    gap: 20px;
+  }
 }
