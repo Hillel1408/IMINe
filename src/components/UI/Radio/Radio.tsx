@@ -6,9 +6,9 @@ export default function Radio({
   onChange,
   radioRef,
 }: {
-  value?: string;
-  name?: string;
-  onChange?: (e: any) => void;
+  value: string;
+  name: string;
+  onChange: (e: any) => void;
   radioRef: any;
 }) {
   return (
