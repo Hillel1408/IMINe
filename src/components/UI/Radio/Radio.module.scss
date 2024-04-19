@@ -1,0 +1,29 @@
+.root {
+  position: relative;
+  user-select: none;
+  & > input {
+    position: absolute;
+    opacity: 0;
+    &:checked ~ span {
+      background-color: #0b0c0e;
+      & > svg {
+        display: block;
+      }
+    }
+  }
+  & > span {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 7.2px;
+    background-color: white;
+    border: 1.2px solid #e2e4e9;
+    transform: translateY(-50%) translateX(-100%);
+    & > svg {
+      display: none;
+    }
+  }
+}

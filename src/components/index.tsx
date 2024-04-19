@@ -7,6 +7,7 @@ import PaymentMethods from "components/PaymentMethods/PaymentMethods";
 import Layout from "components/Layout/Layout";
 import YourOrder from "components/YourOrder/YourOrder";
 import Button from "components/UI/Button/Button";
+import Radio from "components/UI/Radio/Radio";
 
 export {
   Tabs,
@@ -18,4 +19,5 @@ export {
   Layout,
   YourOrder,
   Button,
+  Radio,
 };

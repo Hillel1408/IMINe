@@ -6,6 +6,9 @@ import styles from "components/Delivery/Delivery.module.scss";
 export default function Delivery() {
   const value = useContext(OrderContext);
 
+  const onChange = (e: any) =>
+    value.setOrder({ ...value.order, delivery: e.target.value });
+
   return (
     <Layout>
       <h2 className="subTitle">Доставка</h2>
@@ -19,9 +22,25 @@ export default function Delivery() {
             value.setOrder({ ...value.order, deliveryAddress: e.target.value })
           }
         />
-        <RadioButton text="Самовывоз" image="assets/icons/pickup.svg" />
-        <RadioButton image="assets/icons/sdek.svg" />
-        <RadioButton image="assets/icons/business-line.svg" />
+        <RadioButton
+          text="Самовывоз"
+          image="assets/icons/pickup.svg"
+          name="delivery"
+          value="Самовывоз"
+          onChange={onChange}
+        />
+        <RadioButton
+          image="assets/icons/sdek.svg"
+          name="delivery"
+          value="SDEK"
+          onChange={onChange}
+        />
+        <RadioButton
+          image="assets/icons/business-line.svg"
+          name="delivery"
+          value="Деловые линии"
+          onChange={onChange}
+        />
       </div>
     </Layout>
   );
