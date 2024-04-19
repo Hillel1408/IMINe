@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Input, Layout } from "components";
+import { withMask } from "use-mask-input";
 import { OrderContext } from "pages/Order/Order";
 import styles from "components/BuyerDetails/BuyerDetails.module.scss";
 
@@ -36,6 +37,7 @@ export default function BuyerDetails() {
           onChange={(e: any) =>
             value.setOrder({ ...value.order, phoneNumber: e.target.value })
           }
+          inputRef={withMask("+7 999 999 99 99")}
         />
         <Input
           label="E-mail"

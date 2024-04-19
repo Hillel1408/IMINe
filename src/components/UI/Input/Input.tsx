@@ -6,17 +6,20 @@ export default function Input({
   placeholder,
   value,
   onChange,
+  inputRef,
 }: {
   type: string;
   label?: string;
   placeholder?: string;
   value?: string;
   onChange?: (e: any) => void;
+  inputRef?: any;
 }) {
   return (
     <label className={styles.root}>
       {label}
       <input
+        ref={inputRef}
         type={type}
         placeholder={placeholder}
         value={value}

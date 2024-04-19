@@ -3,9 +3,9 @@
     display: grid;
     grid-template-columns: 1fr 44px;
     gap: 12px;
-  }
-  & > button {
-    background-color: transparent;
+    & > button {
+      background-color: transparent;
+    }
   }
   & > p {
     margin-top: 8px;
