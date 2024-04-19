@@ -9,7 +9,7 @@ export default function Radio({
   value?: string;
   name?: string;
   onChange?: (e: any) => void;
-  radioRef?: any;
+  radioRef: any;
 }) {
   return (
     <label className={styles.root}>

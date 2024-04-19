@@ -6,7 +6,7 @@ export default function Checkbox({
   onChange,
 }: {
   className?: string;
-  onChange?: () => void;
+  onChange: () => void;
 }) {
   return (
     <label className={classNames(styles.root, className)}>

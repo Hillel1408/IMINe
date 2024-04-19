@@ -10,9 +10,9 @@ export default function Input({
 }: {
   type: string;
   label?: string;
-  placeholder?: string;
-  value?: string;
-  onChange?: (e: any) => void;
+  placeholder: string;
+  value: string;
+  onChange: (e: any) => void;
   inputRef?: any;
 }) {
   return (

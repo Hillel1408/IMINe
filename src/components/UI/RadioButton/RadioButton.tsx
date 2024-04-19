@@ -11,9 +11,9 @@ export default function RadioButton({
 }: {
   text?: string;
   image: string;
-  name?: string;
-  value?: string;
-  onChange?: (arg: boolean) => void;
+  name: string;
+  value: string;
+  onChange: (arg: boolean) => void;
 }) {
   const radioRef = useRef<HTMLInputElement>(null);
 
