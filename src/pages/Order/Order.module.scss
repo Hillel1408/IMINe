@@ -1,0 +1,17 @@
+.title {
+  margin-bottom: 32px;
+}
+.tabs {
+  margin-bottom: 16px;
+  width: fit-content;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 309px;
+  gap: 15px;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

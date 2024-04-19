@@ -1,0 +1,27 @@
+.container {
+  max-width: 1312px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+.title {
+  font-family: "Noto Sans";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.64px;
+  color: #0b0c0e;
+  & > span {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 155%;
+    color: #434956;
+  }
+}
+.subTitle {
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #0b0c0e;
+}
