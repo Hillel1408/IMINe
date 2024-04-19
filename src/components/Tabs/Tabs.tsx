@@ -1,11 +1,30 @@
 import classNames from "classnames";
 import styles from "components/Tabs/Tabs.module.scss";
 
-export default function Tabs({ className }: { className?: string }) {
+export default function Tabs({
+  className,
+  tabs,
+  activeTab,
+  setActiveTab,
+}: {
+  className?: string;
+  tabs: string[];
+  activeTab: number;
+  setActiveTab: any;
+}) {
   return (
     <ul className={classNames(styles.root, className)}>
-      <li className={styles.activeTab}>Для физических лиц</li>
-      <li>Для юридических лиц и ИП</li>
+      {tabs.map((item, index) => (
+        <li
+          key={index}
+          onClick={() => {
+            setActiveTab(index + 1);
+          }}
+          className={classNames(activeTab === index + 1 && styles.activeTab)}
+        >
+          {item}
+        </li>
+      ))}
     </ul>
   );
 }

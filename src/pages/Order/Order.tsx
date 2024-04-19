@@ -7,8 +7,13 @@ import {
   YourOrder,
 } from "components";
 import styles from "pages/Order/Order.module.scss";
+import { useState } from "react";
 
 export default function Order() {
+  const [activeTab, setActiveTab] = useState(1);
+
+  const tabs = ["Для физических лиц", "Для юридических лиц и ИП"];
+
   return (
     <div className="container">
       <h1 className={classNames("title", styles.title)}>
@@ -16,11 +21,20 @@ export default function Order() {
       </h1>
       <div className={styles.grid}>
         <div>
-          <Tabs className={styles.tabs} />
+          <Tabs
+            className={styles.tabs}
+            tabs={tabs}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
           <div className={styles.flex}>
-            <BuyerDetails />
-            <Delivery />
-            <PaymentMethods />
+            {activeTab === 1 && (
+              <>
+                <BuyerDetails />
+                <Delivery />
+                <PaymentMethods />
+              </>
+            )}
           </div>
         </div>
         <YourOrder />
