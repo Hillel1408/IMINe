@@ -1,25 +1,16 @@
-import styles from "components/UI/Radio/Radio.module.scss";
+import classNames from "classnames";
+import styles from "components/UI/Checkbox/Checkbox.module.scss";
 
-export default function Radio({
-  value,
-  name,
+export default function Checkbox({
+  className,
   onChange,
-  radioRef,
 }: {
-  value?: string;
-  name?: string;
-  onChange?: (e: any) => void;
-  radioRef?: any;
+  className?: string;
+  onChange?: any;
 }) {
   return (
-    <label className={styles.root}>
-      <input
-        type="radio"
-        value={value}
-        name={name}
-        onChange={onChange}
-        ref={radioRef}
-      />
+    <label className={classNames(styles.root, className)}>
+      <input type="checkbox" onChange={onChange} />
       <span>
         <svg width="25" height="24">
           <g clip-path="url(#clip0_5054_61141)">

@@ -18,3 +18,12 @@
     }
   }
 }
+.checkbox {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  @media (max-width: 480px) {
+    top: 22px;
+    right: 12px;
+  }
+}

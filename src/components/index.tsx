@@ -8,6 +8,7 @@ import Layout from "components/Layout/Layout";
 import YourOrder from "components/YourOrder/YourOrder";
 import Button from "components/UI/Button/Button";
 import Radio from "components/UI/Radio/Radio";
+import Checkbox from "components/UI/Checkbox/Checkbox";
 
 export {
   Tabs,
@@ -20,4 +21,5 @@ export {
   YourOrder,
   Button,
   Radio,
+  Checkbox,
 };
